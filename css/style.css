@@ -1,0 +1,44 @@
+/* ----COMMON */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.float-left { float:  left; }
+.float-right { float: right; }
+.clearfix::after { content: ""; display: table; clear: both; }
+
+/* ----STYLE */
+/* ----wrapper */
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: blue;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----sidebar */
+.sidebar {
+  width: 200px;
+  background: lightgreen;
+  height: 100vh;
+}
+
+/* ----main */
+main {
+  background: orange;
+  width: calc(100% - 200px);
+  height: 100vh;
+}
+
+main .top-navbar {
+  height: 50px;
+  background: hsl(39, 100%, 70%);
+}
+
+/* ----footer */
+footer {
+  position: fixed;
+  height: 50px;
+  background: darkgrey;
+  bottom: 0;
+  width: 1200px;
+}
