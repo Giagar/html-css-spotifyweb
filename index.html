@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Exercise: reproducing spotify">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
-    <div class="wrapper">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Exercise: reproducing spotify">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="wrapper ">
 
-      <section class="sidebar">sidebar</section>
-
-      <div class="top-navbar">
-        upgrade
-      </div>
-
-      <main class="">
-        <div class="main-content">
-
-        </div>
-
-      </main>
-
-      <footer>footer</footer>
-
-
+    <div class="top-navbar">
+      <button>Effettua upgrade</button>
     </div>
-  </body>
+
+    <div class="central-container clearfix">
+      <nav class="sidebar float-left">
+        <div class="top-ul">
+          <div class="logo-container"><i>S</i><h1>Spotify</h1></div>
+          <ul>
+            <li><a href="#"><i>H</i>Home</a></li>
+            <li><a href="#"><i>H</i>Cerca</a></li>
+            <li><a href="#"><i>H</i>La tua libreria</a></li>
+          </ul>
+        </div>
+        <div class="middle-ul">
+          <h2>Playlist</h2>
+          <span class="create-btn">+</span>
+          <span class="create-label">Create Playlist</span>
+          <ul>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+            <li>Nome Playlist</li>
+          </ul>
+        </div>
+        <div class="bottom-ul">
+          <ul>
+            <li>Installa app</li>
+            <li>
+              <i class="profile-img"></i>
+              <span class="profile-name">John Doe</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="float-left">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">in evidenza</a></li>
+            <li><a href="#">in evidenza</a></li>
+            <li><a href="#">in evidenza</a></li>
+            <li><a href="#">in evidenza</a></li>
+            <li><a href="#">in evidenza</a></li>
+            <li><a href="#">in evidenza</a></li>
+          </ul>
+        </nav>
+        <div class="main-content"></div>
+      </main>
+    </div>
+
+
+
+    <footer>footer</footer>
+
+
+  </div>
+</body>
 </html>
