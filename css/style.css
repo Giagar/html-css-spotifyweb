@@ -31,6 +31,7 @@ html {
   margin: 0 auto;
   position: relative;
   overflow-y: hidden;
+  color: #74777B;
 }
 
 
@@ -50,10 +51,10 @@ html {
   z-index: 10;
 }
 
-.top-navbar button {
-  color: #EEEFEF;
+.wrapper .top-navbar button {
+  color: #FFFFFF;
   background: transparent;
-  border: 1px solid #EEEFEF;
+  border: 1px solid #FFFFFF;
   text-transform: uppercase;
   padding: 8px 30px;
   border-radius: 50px;
@@ -103,7 +104,6 @@ main {
 nav.main-nav {
   margin-top: 80px; /* per compensare altezza top-navbar */
   /* background: yellow; */
-  color: #74777B;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -139,6 +139,38 @@ main .main-content {
   /* background: hsl(39, 100%, 80%); */
   width: 100%;
   height: 1000px;
+}
+
+main .main-content .collection {
+  padding: 10px 20px;
+}
+
+main .main-content .collection h2 {
+  padding-left: 5px; /* uguale al padding di .item-container*/
+}
+
+main .main-content .item-container {
+  width: calc(100%/6);
+  padding: 0 5px;
+  text-align: center;
+}
+
+main .main-content .item-container img {
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+
+  main .main-content .item-container {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  main .main-content .item-container {
+    width: 50%;
+  }
 }
 
 
