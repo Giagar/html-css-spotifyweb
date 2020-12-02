@@ -155,8 +155,26 @@ main .main-content .item-container {
   text-align: center;
 }
 
+main .main-content .item-container .img-container {
+  position: relative;
+}
+
 main .main-content .item-container img {
   width: 100%;
+}
+
+main .main-content .item-container .play-button {
+  width: 100%;
+  background: green;
+  opacity: 0.5;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+main .main-content .item-container .img-container:hover .play-button {
+  display: block;
 }
 
 @media screen and (max-width: 992px) {
