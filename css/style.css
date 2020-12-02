@@ -1,13 +1,25 @@
 /* ----COMMON */
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 .float-left { float:  left; }
 .float-right { float: right; }
 .clearfix::after { content: ""; display: table; clear: both; }
 
+/*
+.underline-effect::after {
+
+} */
+
 .wrapper a {
   text-decoration: none;
+  color: inherit;
 }
+
+
 
 /* ----STYLE */
 /* ----wrapper */
@@ -24,9 +36,9 @@
 
 /* ----top-navbar */
 .top-navbar {
-  height: 50px;
-  background: hsl(39, 100%, 70%);
-  position: absolute;
+  height: 80px;
+  background: #080B12;
+  position: fixed;
   top: 0;
   right: 0;
   width: calc(100% - 200px);
@@ -34,41 +46,66 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 14px;
+  padding-right: 20px;
   z-index: 10;
+}
+
+.top-navbar button {
+  color: #EEEFEF;
+  background: transparent;
+  border: 1px solid #EEEFEF;
+  text-transform: uppercase;
+  padding: 8px 30px;
+  border-radius: 50px;
+  font-size: 14px;
 }
 
 /* ----sidebar */
 nav.sidebar {
   width: 200px;
-  background: lightgreen;
-  /* height: 100vh; */
+  background: #000000;
+  height: 100vh;
+  /* padding-bottom: 50px; */
+}
+
+nav.sidebar .top-ul {
+  height: 200px;
+}
+
+
+nav.sidebar .middle-ul {
+  /* min-height: 10px; */
+  /* height: calc(100% - 100px); */
+  height: calc(100vh - 50px - 200px - 100px);
 }
 
 nav.sidebar .middle-ul ul {
   /* min-height: 10px; */
   overflow-y: auto;
-  height: 150px;
+  height: 10vh;
 }
 
 nav.sidebar .bottom-ul {
-  /* position: absolute; */
-  bottom: 50px;
-
+  /* position: absolute;
+  bottom: 50px; */
+  height: 100px;
 }
 
 
 /* ----main */
 main {
-  background: orange;
+  background: #141922;
   height: 100vh;
   width: calc(100% - 200px);
   overflow-y: auto;
 }
 
 nav.main-nav {
-  margin-top: 50px;
-  background: yellow;
+  margin-top: 80px; /* per compensare altezza top-navbar */
+  /* background: yellow; */
+  color: #74777B;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 nav.main-nav ul {
@@ -76,14 +113,30 @@ nav.main-nav ul {
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
+  align-items: center;
 }
 
 nav.main-nav ul li {
-  padding: 0 10px;
+  padding: 20px 10px;
+  position: relative;
 }
 
+/* !hover non funziona! */
+nav.main-nav ul .underline-effect::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  background: #ADFF2E;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+
 main .main-content {
-  background: hsl(39, 100%, 80%);
+  /* background: hsl(39, 100%, 80%); */
   width: 100%;
   height: 1000px;
 }
