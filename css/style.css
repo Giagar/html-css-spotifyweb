@@ -13,11 +13,12 @@
   background: blue;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
 }
 
 /* ----sidebar */
 .sidebar {
-  width: 200px;
+  flex-basis: 200px;
   background: lightgreen;
   height: 100vh;
 }
@@ -27,6 +28,7 @@ main {
   background: orange;
   width: calc(100% - 200px);
   height: 100vh;
+  flex: 1;
 }
 
 main .top-navbar {
