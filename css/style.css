@@ -69,6 +69,11 @@ nav.sidebar {
   /* padding-bottom: 50px; */
 }
 
+nav.sidebar ul{
+  list-style: none;
+  /* padding-left: 50px; */
+}
+
 nav.sidebar .top-ul {
   height: 200px;
 }
@@ -99,6 +104,7 @@ main {
   height: 100vh;
   width: calc(100% - 200px);
   overflow-y: auto;
+  padding-bottom: 80px; /*per compensare altezza footer*/
 }
 
 nav.main-nav {
@@ -248,12 +254,81 @@ main .main-content .popular.collection .item-container img, main .main-content .
   }
 }
 
+@media screen and (max-width: 576px) {
+  nav.sidebar {
+    width: 50px;
+  }
+
+  main {
+    width: calc(100% - 50px);
+  }
+}
+
 
 /* ----footer */
 footer {
   position: fixed;
-  height: 50px;
-  background: darkgrey;
+  height: 80px;
+  background: #282828;
   bottom: 0;
   width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+footer > div {
+  height: 80px;
+  background: orange;
+  padding: 0 10px;
+}
+
+
+/* _track-name */
+footer .track-container {
+  flex-basis: 300px;
+  /* min-width: 200px; */
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+}
+
+footer .track-container img {
+  width: 50px;
+
+}
+
+footer .track-container .track-name {
+  padding-left: 10px;
+  /* padding-right: 40px; */
+  min-width: 90px;
+}
+
+footer .track-container .track-name .album {
+  font-size: 15px;
+}
+
+footer .track-container .track-name .track {
+  font-size: 10px;
+}
+
+
+
+footer .track-controls {
+  flex-basis: 500px;
+  /* min-width: 300px; */
+
+  flex-shrink: 1;
+  flex-grow: 2;
+  border: 1px solid blue;
+  background: green;
+}
+
+footer .track-volume {
+  /* min-width: 200px; */
+  flex-basis: 200px;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
