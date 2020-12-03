@@ -171,10 +171,11 @@ main .main-content .collection > p {
 }
 
 main .main-content .item-container {
-  width: calc(100%/6);
+  width: calc(100%/6 - 3%);
   max-width: 250px;
   padding: 0 5px;
   text-align: center;
+  margin-right: 3%;
 }
 
 main .main-content .item-container .img-container {
@@ -223,6 +224,14 @@ main .main-content .item-container .subtitle {
 
 main .main-content .popular.collection .item-container img, main .main-content .popular.collection .item-container .pay-button, main .main-content .popular.collection .item-container .img-container {
   border-radius: 50%; /*dato a tutti per far iniziare hover su immagine*/
+}
+
+@media screen and (max-width: 1200px) {
+
+  main .main-content .item-container {
+    width: calc(100%/6);
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 992px) {
