@@ -43,7 +43,7 @@ html {
   top: 0;
   right: 0;
   width: calc(100% - 200px);
-  opacity: 0.6;
+  opacity: 0.6; /* TODO: considera  */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -77,13 +77,13 @@ nav.sidebar .top-ul {
 nav.sidebar .middle-ul {
   /* min-height: 10px; */
   /* height: calc(100% - 100px); */
-  height: calc(100vh - 50px - 200px - 100px);
+  height: calc(100% - 200px);
 }
 
 nav.sidebar .middle-ul ul {
   /* min-height: 10px; */
   overflow-y: auto;
-  height: 10vh;
+  height: 15vh;
 }
 
 nav.sidebar .bottom-ul {
@@ -116,12 +116,16 @@ nav.main-nav ul {
   align-items: center;
 }
 
-nav.main-nav ul li {
-  padding: 20px 10px;
+nav.main-nav ul li { /* TODO: prova a rifare dando h predefinita e line-height, poi adegua a, così hover e linkabilità dovrebbero corrispondere */
+  /* padding: 20px 10px; */
+  padding: 0 10px;
+  height: 60px;
   position: relative;
 }
 
-/* li.underline-effect:nth-child(1) > a:nth-child(1) */
+nav.main-nav ul li a {
+  line-height: 60px;
+}
 
 .underline-effect::after {
   content: "";
@@ -136,7 +140,7 @@ nav.main-nav ul li {
 }
 
 /* !hover non funziona! */
-nav.main-nav ul li a:hover .underline-effect::after {
+nav.main-nav ul li:hover .underline-effect::after {
   display: block;
 }
 
@@ -144,7 +148,7 @@ nav.main-nav ul li a:hover .underline-effect::after {
 main .main-content {
   /* background: hsl(39, 100%, 80%); */
   width: 100%;
-  height: 1000px;
+  /* height: 1000px; */
 }
 
 main .main-content .collection {
@@ -170,13 +174,25 @@ main .main-content .item-container img {
 }
 
 main .main-content .item-container .play-button {
-  width: 100%;
-  background: green;
-  opacity: 0.5;
-  height: 100%;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid white;
+  border-radius: 50%;
+  text-align: center;
   display: none;
+}
+
+main .main-content .item-container .play-button i {
+  position: absolute; /* WARNING: c'era un modo più semplice? */
+  top: 50%;
+  left: 55%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
 }
 
 main .main-content .item-container .img-container:hover .play-button {
