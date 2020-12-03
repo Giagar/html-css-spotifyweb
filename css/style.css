@@ -121,8 +121,9 @@ nav.main-nav ul li {
   position: relative;
 }
 
-/* !hover non funziona! */
-nav.main-nav ul .underline-effect::after {
+/* li.underline-effect:nth-child(1) > a:nth-child(1) */
+
+.underline-effect::after {
   content: "";
   position: absolute;
   width: 30%;
@@ -131,6 +132,11 @@ nav.main-nav ul .underline-effect::after {
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
+}
+
+/* !hover non funziona! */
+nav.main-nav ul li a:hover .underline-effect::after {
   display: block;
 }
 
