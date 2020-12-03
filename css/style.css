@@ -1,6 +1,6 @@
 /* ----COMMON */
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif; /* WARNING: le u accentate sono strane, cambia font-family: prova roboto o montserrat */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -155,18 +155,31 @@ main .main-content .collection {
   padding: 10px 20px;
 }
 
+main .main-content .collection h2, main .main-content .collection h3 {
+  color: white;
+}
+
 main .main-content .collection h2 {
   padding-left: 5px; /* uguale al padding di .item-container*/
+  font-size: 22px;
+}
+
+main .main-content .collection > p {
+  padding-top: 4px;
+  padding-left: 5px; /* uguale al padding di .item-container*/
+  font-size: 12px;
 }
 
 main .main-content .item-container {
   width: calc(100%/6);
+  max-width: 250px;
   padding: 0 5px;
   text-align: center;
 }
 
 main .main-content .item-container .img-container {
   position: relative;
+  padding: 24px 0 5px;
 }
 
 main .main-content .item-container img {
@@ -197,6 +210,19 @@ main .main-content .item-container .play-button i {
 
 main .main-content .item-container .img-container:hover .play-button {
   display: block;
+}
+
+main .main-content .item-container h3 {
+  font-size: 14px;
+}
+
+main .main-content .item-container .subtitle {
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+main .main-content .popular.collection .item-container img, main .main-content .popular.collection .item-container .pay-button, main .main-content .popular.collection .item-container .img-container {
+  border-radius: 50%; /*dato a tutti per far iniziare hover su immagine*/
 }
 
 @media screen and (max-width: 992px) {
