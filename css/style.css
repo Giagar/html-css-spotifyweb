@@ -279,15 +279,18 @@ footer {
 
 footer > div {
   height: 80px;
-  background: orange;
   padding: 0 5px;
+}
+
+footer .track-details, footer .track-volume {
+  min-width: 170px;
 }
 
 footer .track-controls i, footer .track-volume i {
   color: white;
 }
 
-/* _track-name */
+/* _track-details */
 footer .track-details {
   flex-basis: 300px;
   /* min-width: 200px; */
@@ -305,7 +308,7 @@ footer .track-details img {
 footer .track-details .track-name {
   padding-left: 10px;
   /* padding-right: 40px; */
-  min-width: 90px;
+  flex-basis: 90px;
 }
 
 footer .track-details .track-name .album {
@@ -317,15 +320,107 @@ footer .track-details .track-name .track {
 }
 
 
+
+
+/* _track-controls */
 footer .track-controls {
   flex-basis: 500px;
   /* min-width: 300px; */
 
   flex-shrink: 1;
   flex-grow: 2;
-  border: 1px solid blue;
-  background: green;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+
+footer .track-controls .controls-container {
+  padding: 10px 0 5px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .track-controls i {
+  font-size: 16px;
+  color: white;
+}
+
+
+footer .track-controls i[class*="fa-play"] {
+  position: relative;
+  padding: 0 15px;
+}
+
+footer .track-controls i[class*="fa-play"]::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
+
+footer .track-controls .progress-bar-container {
+  width: 90%;
+  /* height: 2px;
+  position: relative;
+  height: 3px;
+  background: #808080; */
+  margin-bottom: 5px;
+  /* position: relative; */
+}
+
+footer .track-controls .progress-bar {
+  vertical-align: middle;
+  display: inline-block;
+  width: calc(100% - 70px);
+  /* height: 2px; */
+  position: relative;
+  height: 3px;
+  background: #808080;
+  /* margin-bottom: 20px; */
+  /* position: relative; */
+}
+
+footer .track-controls .time-start {
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  font-size: 8px;
+  color: white;
+}
+
+footer .track-controls .time-end {
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  font-size: 8px;
+  color: white;
+  text-align: right;
+}
+
+.current-progress::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background: #FFFFFF;
+}
+
+
+
+
+
 
 /* _track-volume */
 footer .track-volume {
@@ -342,7 +437,7 @@ footer .track-volume i {
   padding-left: 10px;
 }
 
-footer .track-volume .volume-bar-container {
+footer .track-volume .volume-bar {
   display: inline-block;
   width: 100px;
   height: 2px;
@@ -350,9 +445,10 @@ footer .track-volume .volume-bar-container {
   position: relative;
 }
 
+/* TODO: unisci al precedente */
 footer .track-volume .volume-bar {
-  width: 100%;
-  height: 2px;
+  /* width: 100%; */
+  height: 3px;
   background: #808080;
   /* margin-left: 10px; */
 }
@@ -362,8 +458,8 @@ footer .track-volume .volume-bar {
   display: block;
   position: absolute;
   width: 30%;
-  height: 2px;
-  background: #9E9E9E;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 3px;
+  background: #FFFFFF;
+  /* top: 50%;
+  transform: translateY(-50%); */
 }
