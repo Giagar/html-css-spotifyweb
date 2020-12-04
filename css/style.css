@@ -22,6 +22,9 @@ html {
   color: inherit;
 }
 
+.custom-xs-visible {
+  display: none;
+}
 
 
 /* ----STYLE */
@@ -73,6 +76,7 @@ nav.sidebar {
   padding-right: 20px;
   font-size: 14px;
   /* padding-bottom: 50px; */
+  position: relative; /* per bottom-ul quando xs */
 }
 
 nav.sidebar ul{
@@ -80,57 +84,57 @@ nav.sidebar ul{
   /* padding-left: 50px; */
 }
 
-nav.sidebar .top-ul {
+nav.sidebar .top-ul.custom-xs-hidden {
   height: 200px;
 }
 
-nav.sidebar .top-ul .logo-container {
+nav.sidebar .top-ul.custom-xs-hidden .logo-container {
   text-align: left;
   width: 100px;
   height: 80px;
   line-height: 80px;
 }
 
-nav.sidebar .top-ul .logo-container img {
+nav.sidebar .top-ul.custom-xs-hidden .logo-container img {
   width: 100%;
   vertical-align: middle;
 }
 
-nav.sidebar .top-ul li {
+nav.sidebar .top-ul.custom-xs-hidden li {
   padding-bottom: 8px;
 }
 
-nav.sidebar .top-ul li:first-child {
+nav.sidebar .top-ul.custom-xs-hidden li:first-child {
   color: white;
 }
 
-nav.sidebar .top-ul li img {
+nav.sidebar .top-ul.custom-xs-hidden li img {
   width: 25px;
   vertical-align: sub;
 }
 
 
-nav.sidebar .middle-ul {
+nav.sidebar .middle-ul.custom-xs-hidden {
   /* min-height: 10px; */
   /* height: calc(100% - 100px); */
   /* height: calc(100% - 200px); */
   height: auto;
 }
 
-nav.sidebar .middle-ul ul {
+nav.sidebar .middle-ul.custom-xs-hidden ul {
   /* min-height: 10px; */
   overflow-y: auto;
   height: 15vh;
 }
 
-nav.sidebar .middle-ul h2 {
+nav.sidebar .middle-ul.custom-xs-hidden h2 {
   font-size: 16px;
   text-transform: uppercase;
   color: white;
   padding-bottom: 10px;
 }
 
-nav.sidebar .middle-ul .create-btn {
+nav.sidebar .middle-ul.custom-xs-hidden .create-btn {
   font-size: 16px;
   font-weight: bold;
   width: 35px;
@@ -144,7 +148,7 @@ nav.sidebar .middle-ul .create-btn {
   margin-right: 5px;
 }
 
-nav.sidebar .middle-ul .create-label {
+nav.sidebar .middle-ul.custom-xs-hidden .create-label {
   font-size: 16px;
 
   line-height: 35px;
@@ -152,7 +156,7 @@ nav.sidebar .middle-ul .create-label {
 }
 
 
-nav.sidebar .middle-ul li {
+nav.sidebar .middle-ul.custom-xs-hidden li {
   padding-top: 15px;
   /* font-size: 14px */
 }
@@ -161,24 +165,24 @@ nav.sidebar .middle-ul li {
 
 
 
-nav.sidebar .bottom-ul {
+nav.sidebar .bottom-ul.custom-xs-hidden {
   /* position: absolute;
   bottom: 50px; */
   /* height: 100px; */
 }
 
-nav.sidebar .bottom-ul ul li:first-child {
+nav.sidebar .bottom-ul.custom-xs-hidden ul li:first-child {
   font-size: 14px;
   padding-bottom: 8px;
   border-bottom: 1px solid #74777B;
   margin-bottom: 8px;
 }
 
-nav.sidebar .bottom-ul ul li:first-child [class*="fa"] {
+nav.sidebar .bottom-ul.custom-xs-hidden ul li:first-child [class*="fa"] {
   margin-right: 10px;
 }
 
-nav.sidebar .bottom-ul ul li:last-child .profile-img {
+nav.sidebar .bottom-ul.custom-xs-hidden ul li:last-child .profile-img {
   margin-right: 5px;
   width: 25px;
   height: 25px;
@@ -191,10 +195,50 @@ nav.sidebar .bottom-ul ul li:last-child .profile-img {
   vertical-align: middle;
 }
 
-nav.sidebar .bottom-ul ul li:last-child .profile-name {
+nav.sidebar .bottom-ul.custom-xs-hidden ul li:last-child .profile-name {
   vertical-align: middle;
   font-size: 16px;
   color: white;
+}
+
+nav.sidebar .top-ul.custom-xs-visible, nav.sidebar .bottom-ul.custom-xs-visible {
+  text-align: center;
+}
+
+nav.sidebar .top-ul.custom-xs-visible ul {
+  list-style: none;
+}
+
+nav.sidebar .top-ul.custom-xs-visible .logo-container {
+  text-align: center;
+  width: 50px;
+}
+
+nav.sidebar .top-ul.custom-xs-visible .logo-container img {
+  width: 28px;
+}
+
+nav.sidebar .top-ul.custom-xs-visible li img {
+  width: 25px;
+}
+
+nav.sidebar .bottom-ul.custom-xs-visible {
+  position: absolute;
+  bottom: 80px;
+  text-align: center;
+  width: 50px;
+}
+
+nav.sidebar .bottom-ul.custom-xs-visible li {
+  width: 50px;
+}
+
+nav.sidebar .bottom-ul.custom-xs-visible li:last-child i {
+  width: 16px;
+}
+
+nav.sidebar .bottom-ul.custom-xs-visible li:last-child img {
+  width: 25px;
 }
 
 
@@ -353,6 +397,7 @@ main .main-content .popular.collection .item-container img, main .main-content .
 @media screen and (max-width: 576px) {
   nav.sidebar {
     width: 50px;
+    padding: 10px 0;
   }
 
   .top-navbar {
@@ -361,6 +406,14 @@ main .main-content .popular.collection .item-container img, main .main-content .
 
   main {
     width: calc(100% - 50px);
+  }
+
+  .custom-xs-hidden {
+    display: none;
+  }
+
+  .custom-xs-visible {
+    display: block;
   }
 
 }
