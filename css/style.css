@@ -67,6 +67,7 @@ nav.sidebar {
   background: #000000;
   height: 100vh;
   padding-left: 20px;
+  font-size: 14px;
   /* padding-bottom: 50px; */
 }
 
@@ -91,6 +92,19 @@ nav.sidebar .top-ul .logo-container img {
   vertical-align: middle;
 }
 
+nav.sidebar .top-ul li {
+  padding-bottom: 8px;
+}
+
+nav.sidebar .top-ul li:first-child {
+  color: white;
+}
+
+nav.sidebar .top-ul li img {
+  width: 25px;
+  vertical-align: sub;
+}
+
 
 nav.sidebar .middle-ul {
   /* min-height: 10px; */
@@ -104,11 +118,50 @@ nav.sidebar .middle-ul ul {
   height: 15vh;
 }
 
+nav.sidebar .middle-ul h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 10px;
+}
+
+nav.sidebar .middle-ul .create-btn {
+  font-size: 16px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  background: #74777B;
+  color: #000000;
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+nav.sidebar .middle-ul .create-label {
+  font-size: 16px;
+
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+
+nav.sidebar .middle-ul li {
+  padding-top: 15px;
+  /* font-size: 14px */
+}
+
+
+
+
+
 nav.sidebar .bottom-ul {
   /* position: absolute;
   bottom: 50px; */
   height: 100px;
 }
+
 
 
 /* ----main */
