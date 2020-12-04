@@ -1,4 +1,3 @@
-/* TODO: versione xs della sidebar */
 /* BUG: centra hover main/album */
 
 /* ----COMMON */
@@ -84,57 +83,57 @@ nav.sidebar ul{
   /* padding-left: 50px; */
 }
 
-nav.sidebar .top-ul.custom-xs-hidden {
+nav.sidebar .top-ul {
   height: 200px;
 }
 
-nav.sidebar .top-ul.custom-xs-hidden .logo-container {
+nav.sidebar .top-ul .logo-container {
   text-align: left;
   width: 100px;
   height: 80px;
   line-height: 80px;
 }
 
-nav.sidebar .top-ul.custom-xs-hidden .logo-container img {
+nav.sidebar .top-ul .logo-container img {
   width: 100%;
   vertical-align: middle;
 }
 
-nav.sidebar .top-ul.custom-xs-hidden li {
+nav.sidebar .top-ul li {
   padding-bottom: 8px;
 }
 
-nav.sidebar .top-ul.custom-xs-hidden li:first-child {
+nav.sidebar .top-ul li:first-child {
   color: white;
 }
 
-nav.sidebar .top-ul.custom-xs-hidden li img {
+nav.sidebar .top-ul li img {
   width: 25px;
   vertical-align: sub;
 }
 
 
-nav.sidebar .middle-ul.custom-xs-hidden {
+nav.sidebar .middle-ul {
   /* min-height: 10px; */
   /* height: calc(100% - 100px); */
   /* height: calc(100% - 200px); */
   height: auto;
 }
 
-nav.sidebar .middle-ul.custom-xs-hidden ul {
+nav.sidebar .middle-ul ul {
   /* min-height: 10px; */
   overflow-y: auto;
   height: 15vh;
 }
 
-nav.sidebar .middle-ul.custom-xs-hidden h2 {
+nav.sidebar .middle-ul h2 {
   font-size: 16px;
   text-transform: uppercase;
   color: white;
   padding-bottom: 10px;
 }
 
-nav.sidebar .middle-ul.custom-xs-hidden .create-btn {
+nav.sidebar .middle-ul .create-btn {
   font-size: 16px;
   font-weight: bold;
   width: 35px;
@@ -148,7 +147,7 @@ nav.sidebar .middle-ul.custom-xs-hidden .create-btn {
   margin-right: 5px;
 }
 
-nav.sidebar .middle-ul.custom-xs-hidden .create-label {
+nav.sidebar .middle-ul .create-label {
   font-size: 16px;
 
   line-height: 35px;
@@ -156,7 +155,7 @@ nav.sidebar .middle-ul.custom-xs-hidden .create-label {
 }
 
 
-nav.sidebar .middle-ul.custom-xs-hidden li {
+nav.sidebar .middle-ul li {
   padding-top: 15px;
   /* font-size: 14px */
 }
@@ -165,24 +164,24 @@ nav.sidebar .middle-ul.custom-xs-hidden li {
 
 
 
-nav.sidebar .bottom-ul.custom-xs-hidden {
+nav.sidebar .bottom-ul {
   /* position: absolute;
   bottom: 50px; */
   /* height: 100px; */
 }
 
-nav.sidebar .bottom-ul.custom-xs-hidden ul li:first-child {
+nav.sidebar .bottom-ul ul li:first-child {
   font-size: 14px;
   padding-bottom: 8px;
   border-bottom: 1px solid #74777B;
   margin-bottom: 8px;
 }
 
-nav.sidebar .bottom-ul.custom-xs-hidden ul li:first-child [class*="fa"] {
+nav.sidebar .bottom-ul ul li:first-child [class*="fa"] {
   margin-right: 10px;
 }
 
-nav.sidebar .bottom-ul.custom-xs-hidden ul li:last-child .profile-img {
+nav.sidebar .bottom-ul ul li:last-child .profile-img {
   margin-right: 5px;
   width: 25px;
   height: 25px;
@@ -195,52 +194,11 @@ nav.sidebar .bottom-ul.custom-xs-hidden ul li:last-child .profile-img {
   vertical-align: middle;
 }
 
-nav.sidebar .bottom-ul.custom-xs-hidden ul li:last-child .profile-name {
+nav.sidebar .bottom-ul ul li:last-child .profile-name {
   vertical-align: middle;
   font-size: 16px;
   color: white;
 }
-
-nav.sidebar .top-ul.custom-xs-visible, nav.sidebar .bottom-ul.custom-xs-visible {
-  text-align: center;
-}
-
-nav.sidebar .top-ul.custom-xs-visible ul {
-  list-style: none;
-}
-
-nav.sidebar .top-ul.custom-xs-visible .logo-container {
-  text-align: center;
-  width: 50px;
-}
-
-nav.sidebar .top-ul.custom-xs-visible .logo-container img {
-  width: 28px;
-}
-
-nav.sidebar .top-ul.custom-xs-visible li img {
-  width: 25px;
-}
-
-nav.sidebar .bottom-ul.custom-xs-visible {
-  position: absolute;
-  bottom: 80px;
-  text-align: center;
-  width: 50px;
-}
-
-nav.sidebar .bottom-ul.custom-xs-visible li {
-  width: 50px;
-}
-
-nav.sidebar .bottom-ul.custom-xs-visible li:last-child i {
-  width: 16px;
-}
-
-nav.sidebar .bottom-ul.custom-xs-visible li:last-child img {
-  width: 25px;
-}
-
 
 
 /* ----main */
@@ -397,7 +355,7 @@ main .main-content .popular.collection .item-container img, main .main-content .
 @media screen and (max-width: 576px) {
   nav.sidebar {
     width: 50px;
-    padding: 10px 0;
+    padding: 10px 0 90px; /*90px = 10px + 80px del footer*/
   }
 
   .top-navbar {
@@ -416,6 +374,56 @@ main .main-content .popular.collection .item-container img, main .main-content .
     display: block;
   }
 
+  nav.sidebar .top-ul, nav.sidebar .bottom-ul {
+    text-align: center;
+  }
+
+  nav.sidebar .top-ul ul {
+    list-style: none;
+  }
+
+  nav.sidebar .top-ul .logo-container {
+    /* text-align: center !important; */
+    width: 50px;
+    height: auto;
+    margin-bottom: 8px;
+    line-height: normal;
+  }
+
+  nav.sidebar .top-ul .logo-container img {
+    width: 28px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  nav.sidebar .top-ul li img {
+    width: 25px;
+  }
+
+  nav.sidebar .bottom-ul {
+    position: absolute;
+    bottom: 90px; /*altezza footer (80px) + padding di 10px*/
+    text-align: center;
+    width: 50px;
+  }
+
+  nav.sidebar .bottom-ul li {
+    width: 50px;
+  }
+
+  nav.sidebar .bottom-ul ul li:first-child {
+    border-bottom: none;
+  }
+
+  nav.sidebar .bottom-ul ul li:first-child [class*="fa"] {
+    width: 16px;
+    margin-right: 0;
+  }
+
+  nav.sidebar .bottom-ul ul li:last-child .profile-img {
+    width: 25px;
+    margin-right: 0;
+  }
 }
 
 

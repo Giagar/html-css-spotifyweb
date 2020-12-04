@@ -19,15 +19,15 @@
     <div class="central-container clearfix">
       <nav class="sidebar float-left">
 
-        <!-- contenuto navbar visibile quando > xs -->
-        <div class="top-ul custom-xs-hidden">
+        <div class="top-ul">
           <div class="logo-container">
-            <img src="./img/logo.svg" alt="">
+            <img src="./img/logo.svg" alt="#" class="custom-xs-hidden">
+            <img src="./img/logo-small.svg" alt="#" class="custom-xs-visible">
           </div>
           <ul>
-            <li><a href="#"><img src="./img/home.svg" alt="#"> Home</a></li>
-            <li><a href="#"><img src="./img/search.svg" alt="#"> Cerca</a></li>
-            <li><a href="#"><img src="./img/libreria.svg" alt="#"> La tua libreria</a></li>
+            <li><a href="#"><img src="./img/home.svg" alt="#"><span class="custom-xs-hidden">Home</span></a></li>
+            <li><a href="#"><img src="./img/search.svg" alt="#"><span class="custom-xs-hidden">Cerca</span></a></li>
+            <li><a href="#"><img src="./img/libreria.svg" alt="#"><span class="custom-xs-hidden">La tua libreria</span></a></li>
           </ul>
         </div>
         <div class="middle-ul custom-xs-hidden">
@@ -44,37 +44,15 @@
             <li>Nome Playlist</li>
           </ul>
         </div>
-        <div class="bottom-ul custom-xs-hidden">
+        <div class="bottom-ul">
           <ul>
-            <li><i class="fa fa-download"></i><span>Installa app</span></li>
+            <li><i class="fa fa-download"></i><span class="custom-xs-hidden">Installa app</span></li>
             <li>
               <img src="./img/profile.svg" alt="#" class="profile-img">
-              <span class="profile-name">John Doe</span>
+              <span class="profile-name custom-xs-hidden">John Doe</span>
             </li>
           </ul>
         </div>
-
-        <!-- contenuto navbar visibile quando xs -->
-        <div class="top-ul custom-xs-visible">
-          <div class="logo-container">
-            <img src="./img/logo-small.svg" alt="#">
-          </div>
-          <ul>
-            <li><a href="#"><img src="./img/home.svg" alt="#"></a></li>
-            <li><a href="#"><img src="./img/search.svg" alt="#"></a></li>
-            <li><a href="#"><img src="./img/libreria.svg" alt="#"></a></li>
-          </ul>
-        </div>
-
-        <div class="bottom-ul custom-xs-visible">
-          <ul>
-            <li><i class="fa fa-download"></i></li>
-            <li>
-              <img src="./img/profile.svg" alt="#" class="profile-img">
-            </li>
-          </ul>
-        </div>
-
 
       </nav>
 
