@@ -1,3 +1,4 @@
+/* TODO: versione xs della sidebar */
 /* BUG: centra hover main/album */
 
 /* ----COMMON */
@@ -354,9 +355,14 @@ main .main-content .popular.collection .item-container img, main .main-content .
     width: 50px;
   }
 
+  .top-navbar {
+    width: calc(100% - 50px);
+  }
+
   main {
     width: calc(100% - 50px);
   }
+
 }
 
 
