@@ -242,11 +242,6 @@ nav.main-nav ul li a {
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
-  display: none;
-}
-
-/* !hover non funziona! */
-nav.main-nav ul li:hover .underline-effect::after {
   display: block;
 }
 
