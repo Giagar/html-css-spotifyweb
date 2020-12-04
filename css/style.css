@@ -66,6 +66,7 @@ nav.sidebar {
   width: 200px;
   background: #000000;
   height: 100vh;
+  padding-left: 20px;
   /* padding-bottom: 50px; */
 }
 
@@ -76,6 +77,18 @@ nav.sidebar ul{
 
 nav.sidebar .top-ul {
   height: 200px;
+}
+
+nav.sidebar .top-ul .logo-container {
+  text-align: left;
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+}
+
+nav.sidebar .top-ul .logo-container img {
+  width: 100%;
+  vertical-align: middle;
 }
 
 
