@@ -1,3 +1,5 @@
+/* BUG: centra hover main/album */
+
 /* ----COMMON */
 html {
   font-family: 'Noto Sans JP', sans-serif; /* WARNING: le u accentate sono strane, cambia font-family: prova roboto o montserrat */
@@ -67,6 +69,7 @@ nav.sidebar {
   background: #000000;
   height: 100vh;
   padding-left: 20px;
+  padding-right: 20px;
   font-size: 14px;
   /* padding-bottom: 50px; */
 }
@@ -109,7 +112,8 @@ nav.sidebar .top-ul li img {
 nav.sidebar .middle-ul {
   /* min-height: 10px; */
   /* height: calc(100% - 100px); */
-  height: calc(100% - 200px);
+  /* height: calc(100% - 200px); */
+  height: auto;
 }
 
 nav.sidebar .middle-ul ul {
@@ -159,7 +163,37 @@ nav.sidebar .middle-ul li {
 nav.sidebar .bottom-ul {
   /* position: absolute;
   bottom: 50px; */
-  height: 100px;
+  /* height: 100px; */
+}
+
+nav.sidebar .bottom-ul ul li:first-child {
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #74777B;
+  margin-bottom: 8px;
+}
+
+nav.sidebar .bottom-ul ul li:first-child [class*="fa"] {
+  margin-right: 10px;
+}
+
+nav.sidebar .bottom-ul ul li:last-child .profile-img {
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  /* background: grey;
+  border-radius: 50%; */
+  position: relative;
+  /* display: inline-block; */
+  background: grey;
+  vertical-align: middle;
+}
+
+nav.sidebar .bottom-ul ul li:last-child .profile-name {
+  vertical-align: middle;
+  font-size: 16px;
+  color: white;
 }
 
 
