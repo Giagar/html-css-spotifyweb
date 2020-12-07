@@ -1,4 +1,4 @@
-/* BUG: centra hover main/album */
+/* NOTES: se centri un elemento dentro un altro, il positioning non tiene conto del padding del genitore: usa margin invece di paddaing sul genitore (ma attento al margin-collapse verticale) */
 
 /* ----COMMON */
 html {
@@ -70,7 +70,8 @@ html {
 nav.sidebar {
   width: 200px;
   background: #000000;
-  height: 100vh;
+  /* height: 100vh; */
+  height: calc(100vh - 80px);
   padding-left: 20px;
   padding-right: 20px;
   font-size: 14px;
@@ -117,13 +118,14 @@ nav.sidebar .middle-ul {
   /* min-height: 10px; */
   /* height: calc(100% - 100px); */
   /* height: calc(100% - 200px); */
-  height: auto;
+  height: calc(100% - 63px - 200px);
 }
 
 nav.sidebar .middle-ul ul {
   /* min-height: 10px; */
   overflow-y: auto;
-  height: 15vh;
+  /* height: 15vh; */
+  height: calc(100% - 63px);
 }
 
 nav.sidebar .middle-ul h2 {
@@ -284,7 +286,7 @@ main .main-content .item-container {
 
 main .main-content .item-container .img-container {
   position: relative;
-  padding: 24px 0 5px;
+  margin: 24px 0 5px;
 }
 
 main .main-content .item-container img {
@@ -307,7 +309,7 @@ main .main-content .item-container .play-button {
 main .main-content .item-container .play-button i {
   position: absolute; /* WARNING: c'era un modo più semplice? */
   top: 50%;
-  left: 55%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
+  left: 59%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
   transform: translate(-50%, -50%);
   font-size: 30px;
   color: white;
