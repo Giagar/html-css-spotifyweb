@@ -438,6 +438,15 @@ main .main-content .popular.collection .item-container img, main .main-content .
   }
 }
 
+nav.sidebar a:hover {
+  color: white;
+}
+
+nav.sidebar a:hover .create-btn {
+  background-color: white;
+}
+
+
 
 /* ----footer */
 footer {
