@@ -496,6 +496,7 @@ footer .track-details .track-name {
 
 footer .track-details .track-name .album {
   font-size: 15px;
+  color: white;
 }
 
 footer .track-details .track-name .track {
@@ -645,4 +646,29 @@ footer .track-volume .volume-bar {
   background: #FFFFFF;
   /* top: 50%;
   transform: translateY(-50%); */
+}
+
+footer i:hover {
+  color: white;
+  cursor: pointer;
+}
+
+footer .track-details .track:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+footer .track-controls [class*="fa-play"]:hover {
+  transform: scale(1.1);
+}
+
+footer .progress-bar:hover, 
+footer .current-progress::after {
+  cursor: pointer;
+}
+
+/* NOTES: to hover on a pseudo-element: :hover::pseudo-element */
+footer .progress-bar:hover .current-progress:hover::after, 
+footer .current-progress:hover::after {
+  background-color: #C4F56A;
 }
