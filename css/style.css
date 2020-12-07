@@ -681,14 +681,13 @@ footer .circle-indicator:hover::before {
   display: block;
 }
 
-footer .progress-bar:hover, 
-footer .current-progress:hover {
+footer .bar:hover {
   cursor: pointer;
 }
 
 /* NOTES: to hover on a pseudo-element: :hover::pseudo-element */
-footer .progress-bar:hover .current-progress::after, 
-footer .current-progress:hover::after {
+footer [class*="-bar"]:hover [class*="-current"]::after, 
+footer [class*="current"]:hover::after {
   background-color: #C4F56A;
 }
 
