@@ -66,6 +66,10 @@ html {
   font-size: 14px;
 }
 
+.wrapper .top-navbar button:hover {
+  transform: scale(1.1);
+}
+
 /* ----sidebar */
 nav.sidebar {
   width: 200px;
@@ -237,6 +241,12 @@ nav.main-nav ul li { /* TODO: prova a rifare dando h predefinita e line-height, 
 nav.main-nav ul li a {
   line-height: 60px;
 }
+
+
+nav.main-nav ul li a:hover {
+  color: white;
+}
+
 
 .underline-effect::after {
   content: "";
