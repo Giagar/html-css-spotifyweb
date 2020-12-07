@@ -309,30 +309,34 @@ main .main-content .item-container .img-container .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background-color: hsla(0, 0%, 0%, 0.4);
   display: none;
 }
 
-main .main-content .item-container .overlay .play-button {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 4px solid white;
-  border-radius: 50%;
-  text-align: center;
-}
-
-main .main-content .item-container .overlay .play-button i {
+main .main-content .item-container .overlay i {
   position: absolute; /* WARNING: c'era un modo più semplice? */
   top: 50%;
-  left: 59%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
+  left: 54%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
   transform: translate(-50%, -50%);
   font-size: 30px;
   color: white;
 }
+
+
+main .main-content .item-container .overlay i.play-button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 35%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
+  transform: translate(-50%, -50%);
+  border: 4px solid white;
+  border-radius: 50%;
+  /* text-align: center; */
+}
+
 
 main .main-content .item-container .img-container:hover .overlay {
   display: block;
@@ -347,7 +351,7 @@ main .main-content .item-container .subtitle {
   padding-top: 5px;
 }
 
-main .main-content .popular.collection .item-container img, main .main-content .popular.collection .item-container .pay-button, main .main-content .popular.collection .item-container .img-container {
+main .main-content .popular.collection .item-container img, main .main-content .popular.collection .item-container .overlay, main .main-content .popular.collection .item-container .img-container {
   border-radius: 50%; /*dato a tutti per far iniziare hover su immagine*/
 }
 
