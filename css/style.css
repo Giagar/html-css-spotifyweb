@@ -304,7 +304,7 @@ main .main-content .item-container img {
 }
 
 main .main-content .item-container .img-container .overlay {
-  height: 100%;
+  height: calc(100% - 5px); /*per adattare a immagine*/
   width: 100%;
   position: absolute;
   top: 0;
