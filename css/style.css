@@ -303,7 +303,17 @@ main .main-content .item-container img {
   width: 100%;
 }
 
-main .main-content .item-container .play-button {
+main .main-content .item-container .img-container .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  display: none;
+}
+
+main .main-content .item-container .overlay .play-button {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -313,10 +323,9 @@ main .main-content .item-container .play-button {
   border: 4px solid white;
   border-radius: 50%;
   text-align: center;
-  display: none;
 }
 
-main .main-content .item-container .play-button i {
+main .main-content .item-container .overlay .play-button i {
   position: absolute; /* WARNING: c'era un modo più semplice? */
   top: 50%;
   left: 59%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
@@ -325,7 +334,7 @@ main .main-content .item-container .play-button i {
   color: white;
 }
 
-main .main-content .item-container .img-container:hover .play-button {
+main .main-content .item-container .img-container:hover .overlay {
   display: block;
 }
 
