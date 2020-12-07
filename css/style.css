@@ -471,6 +471,7 @@ footer {
 
   display: flex;
   justify-content: space-between;
+  z-index: 14; /*per far sì che copra la top-navbar nel movimento verticale (z-index top-navbar: 10)*/
 }
 
 footer > div {
