@@ -637,6 +637,21 @@ footer .track-volume .volume-bar {
   /* margin-left: 10px; */
 }
 
+
+.circle-indicator::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 2;
+  display: none;
+}
+
 .current-volume::after {
   content: "";
   display: block;
@@ -662,13 +677,18 @@ footer .track-controls [class*="fa-play"]:hover {
   transform: scale(1.1);
 }
 
+footer .circle-indicator:hover::before {
+  display: block;
+}
+
 footer .progress-bar:hover, 
-footer .current-progress::after {
+footer .current-progress:hover {
   cursor: pointer;
 }
 
 /* NOTES: to hover on a pseudo-element: :hover::pseudo-element */
-footer .progress-bar:hover .current-progress:hover::after, 
+footer .progress-bar:hover .current-progress::after, 
 footer .current-progress:hover::after {
   background-color: #C4F56A;
 }
+
