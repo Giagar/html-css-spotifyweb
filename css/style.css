@@ -92,18 +92,15 @@ html {
 nav.sidebar {
   width: 200px;
   background: #000000;
-  /* height: 100vh; */
   height: calc(100vh - 80px);
   padding-left: 20px;
   padding-right: 20px;
   font-size: 14px;
-  /* padding-bottom: 50px; */
   position: relative; /* per bottom-ul quando xs */
 }
 
 nav.sidebar ul{
   list-style: none;
-  /* padding-left: 50px; */
 }
 
 nav.sidebar a:hover {
@@ -146,18 +143,21 @@ nav.sidebar .top-ul li span {
 
 /* ----middle-ul */
 nav.sidebar .middle-ul {
-  /* min-height: 10px; */
-  /* height: calc(100% - 100px); */
-  /* height: calc(100% - 200px); */
   height: calc(100% - 68px - 200px);
 }
 
 nav.sidebar .middle-ul ul {
-  /* min-height: 10px; */
   overflow-y: auto;
-  /* height: 15vh; */
   height: calc(100% - 68px);
 }
+
+/* _per far scomparire bottom-ul sotto h2{playlist} e il tag a contenente .create-btn e .create-label */
+nav.sidebar .middle-ul h2, nav.sidebar .middle-ul .create-container {
+  background-color: #000000;
+  position: relative;
+  z-index: 10;
+}
+/* _/per far scomparire bottom-ul... */
 
 nav.sidebar .middle-ul h2 {
   font-size: 16px;
@@ -186,23 +186,15 @@ nav.sidebar a:hover .create-btn {
 
 nav.sidebar .middle-ul .create-label {
   font-size: 16px;
-
   line-height: 35px;
   vertical-align: middle;
 }
 
 nav.sidebar .middle-ul li {
   padding-top: 15px;
-  /* font-size: 14px */
 }
 
 /* ----bottom-ul */
-nav.sidebar .bottom-ul {
-  /* position: absolute;
-  bottom: 50px; */
-  /* height: 100px; */
-}
-
 nav.sidebar .bottom-ul ul li:first-child {
   font-size: 14px;
   padding-bottom: 8px;
