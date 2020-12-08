@@ -12,11 +12,15 @@
 <body>
   <div class="wrapper">
 
+    <!-- top-navbar -->
     <div class="top-navbar">
       <button>Effettua l'upgrade</button>
     </div>
+    <!-- /top-navbar -->
 
+    <!-- central-container: sidebar & main -->
     <div class="central-container clearfix">
+      <!-- sidebar -->
       <nav class="sidebar float-left">
 
         <div class="top-ul">
@@ -30,13 +34,13 @@
             <li><a href="#"><img src="./img/libreria.svg" alt="#"><span class="custom-xs-hidden"> La tua libreria</span></a></li>
           </ul>
         </div>
+
         <div class="middle-ul custom-xs-hidden">
           <h2>Playlist</h2>
           <a href="#">
             <span class="create-btn">+</span>
             <span class="create-label">Crea Playlist</span>
-          </a>
-          
+          </a>          
           <ul>
             <li><a href="#">Nome Playlist</a></li>
             <li><a href="#">Nome Playlist</a></li>
@@ -47,6 +51,7 @@
             <li><a href="#">Nome Playlist</a></li> -->
           </ul>
         </div>
+
         <div class="bottom-ul">
           <ul>
             <li><a href=""><i class="fa fa-download"></i><span class="custom-xs-hidden">Installa app</span></a></li>
@@ -56,10 +61,12 @@
             </li>
           </ul>
         </div>
-
       </nav>
+      <!-- /sidebar -->
 
+      <!-- main: main-nav & main-content (album collections) -->
       <main class="float-left">
+        <!-- main-nav -->
         <nav class="main-nav">
           <ul>
             <li><a class="underline-effect" href="#">in evidenza</a></li>
@@ -70,6 +77,9 @@
             <li><a href="#">scopri</a></li>
           </ul>
         </nav>
+        <!-- /main-nav -->
+
+        <!-- main-content -->
         <div class="main-content">
 
           <section class="recent collection">
@@ -192,14 +202,16 @@
             </div>
           </section>
 
-
         </div>
+        <!-- /main-content -->
       </main>
+      <!-- /main: main-nav & main-content (album collections) -->
     </div>
+    <!-- /central-container: sidebar & main -->
 
-
-
+    <!-- footer: track-details & track-controls & track-volume -->
     <footer>
+      <!-- track-details -->
       <div class="track-details">
         <img src="./img/sinister.jpeg" alt="#">
         <div class="track-name">
@@ -210,9 +222,10 @@
           <i class="fa fa-heart"></i>
           <i class="fa fa-folder"></i>
         </div>
-
       </div>
-
+      <!-- /track-details -->
+      
+      <!-- track-controls -->
       <div class="track-controls">
         <div class="controls-container">
           <i class="fa fa-random"></i>
@@ -227,18 +240,19 @@
           <div class="time-end">4:35</div>
         </div>
       </div>
+      <!-- /track-controls -->
 
+      <!-- track-volume -->
       <div class="track-volume">
         <i class="fa fa-list"></i>
         <i class="fa fa-tv"></i>
         <i class="fa fa-volume-up"></i>
-        <!-- <div class="volume-bar-container"> -->
-          <div class="volume-bar current-volume circle-indicator bar"></div>
-        <!-- </div> -->
+        <div class="volume-bar current-volume circle-indicator bar"></div>
       </div>
+      <!-- /track-volume -->
     </footer>
-
-
+    <!-- /footer: track-details & track-controls & track-volume -->
+    
   </div>
 </body>
 </html>

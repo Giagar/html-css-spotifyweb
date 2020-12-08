@@ -133,7 +133,7 @@ nav.sidebar .middle-ul ul {
   /* min-height: 10px; */
   overflow-y: auto;
   /* height: 15vh; */
-  height: calc(100% - 63px);
+  height: calc(100% - 68px);
 }
 
 nav.sidebar .middle-ul h2 {
