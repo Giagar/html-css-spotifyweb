@@ -1,20 +1,38 @@
-/* NOTES: se centri un elemento dentro un altro, il positioning non tiene conto del padding del genitore: usa margin invece di paddaing sul genitore (ma attento al margin-collapse verticale) */
+/**********************************
+LEGENDA:
 
-/* ----COMMON */
+GRUPPO
+-- nuova sezione
+---- inizio sotto sezione
+_nuovo elemento /fine elemento
+commento
+
+***********************************/
+
+
+/* COMMON RULES & UTILITY CLASSES */
 html {
-  font-family: 'Noto Sans JP', sans-serif; /* WARNING: le u accentate sono strane, cambia font-family: prova roboto o montserrat */
+  font-family: 'Open Sans', sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
-.float-left { float:  left; }
-.float-right { float: right; }
-.clearfix::after { content: ""; display: table; clear: both; }
+.float-left { 
+  float: left; 
+}
 
-/*
-.underline-effect::after {
+.float-right { 
+  float: right; 
+}
 
-} */
+.clearfix::after { 
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
 
 .wrapper a {
   text-decoration: none;
@@ -26,21 +44,19 @@ html {
 }
 
 
-/* ----STYLE */
-/* ----wrapper */
+/* STYLE */
+/* --wrapper */
 .wrapper {
   height: 100vh;
   width: 100vw;
   background: blue;
-  /* max-width: 1200px; */
   margin: 0 auto;
   position: relative;
   overflow-y: hidden;
   color: #74777B;
 }
 
-
-/* ----top-navbar */
+/* --top-navbar */
 .top-navbar {
   height: 80px;
   background: #080B12;
@@ -48,7 +64,7 @@ html {
   top: 0;
   right: 0;
   width: calc(100% - 200px);
-  opacity: 0.6; /* TODO: considera  */
+  opacity: 0.6;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -56,7 +72,7 @@ html {
   z-index: 10;
 }
 
-.wrapper .top-navbar button {
+.top-navbar button {
   color: #FFFFFF;
   background: transparent;
   border: 1px solid #FFFFFF;
@@ -66,11 +82,12 @@ html {
   font-size: 14px;
 }
 
-.wrapper .top-navbar button:hover {
+.top-navbar button:hover {
   transform: scale(1.1);
 }
 
-/* ----sidebar */
+
+/* --sidebar */
 nav.sidebar {
   width: 200px;
   background: #000000;
@@ -88,6 +105,11 @@ nav.sidebar ul{
   /* padding-left: 50px; */
 }
 
+nav.sidebar a:hover {
+  color: white;
+}
+
+/* ----top-ul */
 nav.sidebar .top-ul {
   height: 200px;
 }
@@ -121,7 +143,7 @@ nav.sidebar .top-ul li span {
   padding-left: 5px;
 }
 
-
+/* ----middle-ul */
 nav.sidebar .middle-ul {
   /* min-height: 10px; */
   /* height: calc(100% - 100px); */
@@ -157,6 +179,10 @@ nav.sidebar .middle-ul .create-btn {
   margin-right: 5px;
 }
 
+nav.sidebar a:hover .create-btn {
+  background-color: white;
+}
+
 nav.sidebar .middle-ul .create-label {
   font-size: 16px;
 
@@ -164,16 +190,12 @@ nav.sidebar .middle-ul .create-label {
   vertical-align: middle;
 }
 
-
 nav.sidebar .middle-ul li {
   padding-top: 15px;
   /* font-size: 14px */
 }
 
-
-
-
-
+/* ----bottom-ul */
 nav.sidebar .bottom-ul {
   /* position: absolute;
   bottom: 50px; */
@@ -196,10 +218,7 @@ nav.sidebar .bottom-ul ul li:last-child .profile-img {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  /* background: grey;
-  border-radius: 50%; */
   position: relative;
-  /* display: inline-block; */
   background: grey;
   vertical-align: middle;
 }
@@ -211,7 +230,7 @@ nav.sidebar .bottom-ul ul li:last-child .profile-name {
 }
 
 
-/* ----main */
+/* --main */
 main {
   background: #141922;
   height: 100vh;
@@ -220,9 +239,9 @@ main {
   padding-bottom: 80px; /*per compensare altezza footer*/
 }
 
+/* ----main-nav */
 nav.main-nav {
   margin-top: 80px; /* per compensare altezza top-navbar */
-  /* background: yellow; */
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -236,7 +255,6 @@ nav.main-nav ul {
 }
 
 nav.main-nav ul li { /* TODO: prova a rifare dando h predefinita e line-height, poi adegua a, così hover e linkabilità dovrebbero corrispondere */
-  /* padding: 20px 10px; */
   padding: 0 10px;
   height: 60px;
   position: relative;
@@ -246,12 +264,11 @@ nav.main-nav ul li a {
   line-height: 60px;
 }
 
-
 nav.main-nav ul li a:hover {
   color: white;
 }
 
-
+/* _underline-effect */
 .underline-effect::after {
   content: "";
   position: absolute;
@@ -263,8 +280,9 @@ nav.main-nav ul li a:hover {
   transform: translateX(-50%);
   display: block;
 }
+/* _/underline-effect */
 
-
+/* ----main-content */
 main .main-content {
   /* background: hsl(39, 100%, 80%); */
   width: 100%;
@@ -293,7 +311,7 @@ main .main-content .collection > p {
 main .main-content .item-container {
   width: calc(100%/6 - 3%);
   max-width: 250px;
-  padding: 0 5px;
+  padding: 0 5px; /* collegato a padding-left di .collection h2 e .collection > p */
   text-align: center;
   margin-right: 3%;
 }
@@ -307,6 +325,7 @@ main .main-content .item-container img {
   width: 100%;
 }
 
+/* _overlay */
 main .main-content .item-container .img-container .overlay {
   height: calc(100% - 5px); /*per adattare a immagine*/
   width: 100%;
@@ -318,14 +337,13 @@ main .main-content .item-container .img-container .overlay {
 }
 
 main .main-content .item-container .overlay i {
-  position: absolute; /* WARNING: c'era un modo più semplice? */
+  position: absolute; 
   top: 50%;
   left: 54%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
   transform: translate(-50%, -50%);
   font-size: 30px;
   color: white;
 }
-
 
 main .main-content .item-container .overlay i.play-button::after {
   content: "";
@@ -338,9 +356,8 @@ main .main-content .item-container .overlay i.play-button::after {
   transform: translate(-50%, -50%);
   border: 4px solid white;
   border-radius: 50%;
-  /* text-align: center; */
 }
-
+/* /_overlay */
 
 main .main-content .item-container .img-container:hover .overlay {
   display: block;
@@ -359,6 +376,227 @@ main .main-content .popular.collection .item-container img, main .main-content .
   border-radius: 50%; /*dato a tutti per far iniziare hover su immagine*/
 }
 
+
+/* --footer */
+footer {
+  position: fixed;
+  height: 80px;
+  background: #282828;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  z-index: 14; /*per far sì che copra la top-navbar nel movimento verticale (z-index top-navbar: 10)*/
+}
+
+footer > div {
+  height: 80px;
+  padding: 0 5px;
+}
+
+
+footer i:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* _progress-bar and current-bar effect on hover */
+footer .bar:hover {
+  cursor: pointer;
+}
+/* _/progress-bar and current-bar effect on hover */
+
+footer [class*="-bar"]:hover [class*="-current"]::after, 
+footer [class*="current"]:hover::after {
+  background-color: #C4F56A;
+}
+
+footer .track-details, footer .track-volume {
+  min-width: 170px;
+}
+
+footer .track-controls i, footer .track-volume i {
+  color: white;
+}
+
+/* ----track-details */
+footer .track-details {
+  flex-basis: 300px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+}
+
+footer .track-details img {
+  width: 50px;
+}
+
+footer .track-details .track-name {
+  padding-left: 10px;
+  /* padding-right: 40px; */
+  flex-basis: 90px;
+}
+
+footer .track-details .track-name .album {
+  font-size: 15px;
+  color: white;
+}
+
+footer .track-details .track-name .track {
+  font-size: 10px;
+}
+
+footer .track-details .track:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* ----track-controls */
+footer .track-controls {
+  flex-basis: 500px;
+  flex-shrink: 1;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .track-controls .controls-container {
+  padding: 10px 0 5px;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .track-controls i {
+  font-size: 16px;
+  color: white;
+}
+
+footer .track-controls i[class*="fa-play"] {
+  position: relative;
+  padding: 0 15px;
+}
+
+footer .track-controls i[class*="fa-play"]::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
+footer .track-controls [class*="fa-play"]:hover {
+  transform: scale(1.1);
+}
+
+footer .track-controls .progress-bar-container {
+  width: 90%;
+  margin-bottom: 5px;
+}
+
+footer .track-controls .progress-bar {
+  vertical-align: middle;
+  display: inline-block;
+  width: calc(100% - 70px);
+  position: relative;
+  height: 3px;
+  background: #808080;
+}
+
+footer .track-controls .time-start {
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  font-size: 8px;
+  color: white;
+}
+
+footer .track-controls .time-end {
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  font-size: 8px;
+  color: white;
+  text-align: right;
+}
+
+/* _current-progress */
+.current-progress::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background: #FFFFFF;
+}
+/* _/current-progress */
+
+/* ----track-volume */
+footer .track-volume {
+  flex-basis: 200px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+footer .track-volume i {
+  padding-left: 10px;
+}
+
+footer .track-volume .volume-bar {
+  display: inline-block;
+  width: 100px;
+  height: 3px;
+  margin-left: 10px;
+  position: relative;
+  background: #808080;
+}
+
+/* _circle-indicator */
+.circle-indicator::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 2;
+  display: none;
+}
+
+footer .circle-indicator:hover::before {
+  display: block;
+}
+/* _/circle-indicator */
+
+/* _current-volume */
+.current-volume::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 3px;
+  background: #FFFFFF;
+}
+/* _/current-volume */
+
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 1200px) {
 
   main .main-content .item-container {
@@ -382,11 +620,7 @@ main .main-content .popular.collection .item-container img, main .main-content .
 }
 
 @media screen and (max-width: 576px) {
-  nav.sidebar {
-    width: 50px;
-    padding: 10px 0 90px; /*90px = 10px + 80px del footer*/
-  }
-
+  
   .top-navbar {
     width: calc(100% - 50px);
   }
@@ -403,6 +637,11 @@ main .main-content .popular.collection .item-container img, main .main-content .
     display: block;
   }
 
+  nav.sidebar {
+    width: 50px;
+    padding: 10px 0 90px; /*90px = 10px + 80px del footer*/
+  }
+
   nav.sidebar .top-ul, nav.sidebar .bottom-ul {
     text-align: center;
   }
@@ -412,7 +651,6 @@ main .main-content .popular.collection .item-container img, main .main-content .
   }
 
   nav.sidebar .top-ul .logo-container {
-    /* text-align: center !important; */
     width: 50px;
     height: auto;
     margin-bottom: 8px;
@@ -454,258 +692,3 @@ main .main-content .popular.collection .item-container img, main .main-content .
     margin-right: 0;
   }
 }
-
-nav.sidebar a:hover {
-  color: white;
-}
-
-nav.sidebar a:hover .create-btn {
-  background-color: white;
-}
-
-
-
-/* ----footer */
-footer {
-  position: fixed;
-  height: 80px;
-  background: #282828;
-  bottom: 0;
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  z-index: 14; /*per far sì che copra la top-navbar nel movimento verticale (z-index top-navbar: 10)*/
-}
-
-footer > div {
-  height: 80px;
-  padding: 0 5px;
-}
-
-footer .track-details, footer .track-volume {
-  min-width: 170px;
-}
-
-footer .track-controls i, footer .track-volume i {
-  color: white;
-}
-
-/* _track-details */
-footer .track-details {
-  flex-basis: 300px;
-  /* min-width: 200px; */
-  flex-shrink: 1;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-
-}
-
-footer .track-details img {
-  width: 50px;
-}
-
-footer .track-details .track-name {
-  padding-left: 10px;
-  /* padding-right: 40px; */
-  flex-basis: 90px;
-}
-
-footer .track-details .track-name .album {
-  font-size: 15px;
-  color: white;
-}
-
-footer .track-details .track-name .track {
-  font-size: 10px;
-}
-
-
-
-
-/* _track-controls */
-footer .track-controls {
-  flex-basis: 500px;
-  /* min-width: 300px; */
-
-  flex-shrink: 1;
-  flex-grow: 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-
-footer .track-controls .controls-container {
-  padding: 10px 0 5px;
-  width: 150px;
-  display: flex;
-  justify-content: space-between;
-}
-
-footer .track-controls i {
-  font-size: 16px;
-  color: white;
-}
-
-
-footer .track-controls i[class*="fa-play"] {
-  position: relative;
-  padding: 0 15px;
-}
-
-footer .track-controls i[class*="fa-play"]::after {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: 2px solid white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 47%;
-  transform: translate(-50%, -50%);
-}
-
-
-footer .track-controls .progress-bar-container {
-  width: 90%;
-  /* height: 2px;
-  position: relative;
-  height: 3px;
-  background: #808080; */
-  margin-bottom: 5px;
-  /* position: relative; */
-}
-
-footer .track-controls .progress-bar {
-  vertical-align: middle;
-  display: inline-block;
-  width: calc(100% - 70px);
-  /* height: 2px; */
-  position: relative;
-  height: 3px;
-  background: #808080;
-  /* margin-bottom: 20px; */
-  /* position: relative; */
-}
-
-footer .track-controls .time-start {
-  vertical-align: middle;
-  display: inline-block;
-  width: 30px;
-  font-size: 8px;
-  color: white;
-}
-
-footer .track-controls .time-end {
-  vertical-align: middle;
-  display: inline-block;
-  width: 30px;
-  font-size: 8px;
-  color: white;
-  text-align: right;
-}
-
-.current-progress::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 30%;
-  height: 3px;
-  background: #FFFFFF;
-}
-
-
-
-
-
-
-/* _track-volume */
-footer .track-volume {
-  /* min-width: 200px; */
-  flex-basis: 200px;
-  flex-shrink: 1;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-footer .track-volume i {
-  padding-left: 10px;
-}
-
-footer .track-volume .volume-bar {
-  display: inline-block;
-  width: 100px;
-  height: 2px;
-  margin-left: 10px;
-  position: relative;
-}
-
-/* TODO: unisci al precedente */
-footer .track-volume .volume-bar {
-  /* width: 100%; */
-  height: 3px;
-  background: #808080;
-  /* margin-left: 10px; */
-}
-
-
-.circle-indicator::before {
-  content: "";
-  height: 10px;
-  width: 10px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  left: 30%;
-  bottom: 50%;
-  transform: translate(-50%, 50%);
-  z-index: 2;
-  display: none;
-}
-
-.current-volume::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 30%;
-  height: 3px;
-  background: #FFFFFF;
-  /* top: 50%;
-  transform: translateY(-50%); */
-}
-
-footer i:hover {
-  color: white;
-  cursor: pointer;
-}
-
-footer .track-details .track:hover {
-  text-decoration: underline;
-  color: white;
-}
-
-footer .track-controls [class*="fa-play"]:hover {
-  transform: scale(1.1);
-}
-
-footer .circle-indicator:hover::before {
-  display: block;
-}
-
-footer .bar:hover {
-  cursor: pointer;
-}
-
-/* NOTES: to hover on a pseudo-element: :hover::pseudo-element */
-footer [class*="-bar"]:hover [class*="-current"]::after, 
-footer [class*="current"]:hover::after {
-  background-color: #C4F56A;
-}
-
