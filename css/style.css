@@ -330,7 +330,7 @@ main .main-content .item-container .img-container .overlay {
 main .main-content .item-container .overlay i {
   position: absolute; 
   top: 50%;
-  left: 54%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
+  left: 54%; /* sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
   transform: translate(-50%, -50%);
   font-size: 30px;
   color: white;
@@ -343,7 +343,7 @@ main .main-content .item-container .overlay i.play-button::after {
   height: 50px;
   position: absolute;
   top: 50%;
-  left: 35%; /* WARNING: workaround: sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
+  left: 35%; /* sono dovuto andare ad occhio per asse x perché icona non perfettamente centrata */
   transform: translate(-50%, -50%);
   border: 4px solid white;
   border-radius: 50%;
