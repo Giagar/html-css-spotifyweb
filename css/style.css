@@ -247,7 +247,7 @@ nav.main-nav ul {
   align-items: center;
 }
 
-nav.main-nav ul li { /* TODO: prova a rifare dando h predefinita e line-height, poi adegua a, così hover e linkabilità dovrebbero corrispondere */
+nav.main-nav ul li { 
   padding: 0 10px;
   height: 60px;
   position: relative;
@@ -277,9 +277,7 @@ nav.main-nav ul li a:hover {
 
 /* ----main-content */
 main .main-content {
-  /* background: hsl(39, 100%, 80%); */
   width: 100%;
-  /* height: 1000px; */
 }
 
 main .main-content .collection {
@@ -388,7 +386,6 @@ footer > div {
   padding: 0 5px;
 }
 
-
 footer i:hover {
   color: white;
   cursor: pointer;
@@ -420,7 +417,6 @@ footer .track-details {
   flex-grow: 1;
   display: flex;
   align-items: center;
-
 }
 
 footer .track-details img {
@@ -446,11 +442,9 @@ footer .track-details .track:hover {
   color: white;
 }
 
-
 footer .track-details .icons .fa-heart {
   padding-right: 5px;
 }
-
 
 /* ----track-controls */
 footer .track-controls {
@@ -638,6 +632,14 @@ footer .circle-indicator:hover::before {
   nav.sidebar {
     width: 50px;
     padding: 10px 0 90px; /*90px = 10px + 80px del footer*/
+    height: 100vh;
+  }
+
+  nav.sidebar .top-ul {
+    background-color: #000000;
+    position: relative;
+    z-index: 10;
+    height: auto;
   }
 
   nav.sidebar .top-ul, nav.sidebar .bottom-ul {
