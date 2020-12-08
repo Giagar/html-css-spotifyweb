@@ -15,7 +15,8 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
-* { box-sizing: border-box; 
+* { 
+  box-sizing: border-box; 
   margin: 0; 
   padding: 0; 
 }
@@ -436,7 +437,6 @@ footer .track-details img {
 
 footer .track-details .track-name {
   padding-left: 10px;
-  /* padding-right: 40px; */
   flex-basis: 90px;
 }
 
@@ -453,6 +453,12 @@ footer .track-details .track:hover {
   text-decoration: underline;
   color: white;
 }
+
+
+footer .track-details .icons .fa-heart {
+  padding-right: 5px;
+}
+
 
 /* ----track-controls */
 footer .track-controls {
