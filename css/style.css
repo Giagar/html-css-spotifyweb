@@ -280,6 +280,11 @@ main .main-content {
   width: 100%;
 }
 
+main .main-content .albums-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 main .main-content .collection {
   padding: 10px 20px;
 }
